@@ -27,6 +27,8 @@ namespace SURoommateSearch.Models
         [Display(Name = "Phone Number: ")]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
+
+		// Test comment
         public string Gender { get; set; }
         public string Hometown { get; set; }
     }
