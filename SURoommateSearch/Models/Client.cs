@@ -19,6 +19,7 @@ namespace SURoommateSearch.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+		[Display(Name = "First name: ")]
         public string FirstName { get; set; }
         public int Age { get; set; }
         public string Major { get; set; }
@@ -26,9 +27,9 @@ namespace SURoommateSearch.Models
 
         [Display(Name = "Phone Number: ")]
         [DataType(DataType.PhoneNumber)]
-        public string Phone { get; set; }
+		[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
+		public string Phone { get; set; }
 
-		// Test comment
         public string Gender { get; set; }
         public string Hometown { get; set; }
     }
