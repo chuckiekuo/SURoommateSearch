@@ -10,6 +10,8 @@ namespace SURoommateSearch.Models
     public class Client
         
     {
+        [Key]
+        public int ID { get; set; }
         [Required(ErrorMessage = "Must include E-mail")]
         [Display(Name = "E-mail address: ")]
         [DataType(DataType.EmailAddress,ErrorMessage = "E-mail is not valid")]
